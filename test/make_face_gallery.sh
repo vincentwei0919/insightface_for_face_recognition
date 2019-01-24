@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python make_face_gallery.py --model ../models/model-r50-am-lfw/model,0000 --data_dir ../dataset/images/ --gpu 0 --threshold 1.2 --gallery_dir ../gallery/my_gallery --det 0 --num_per_class 20
