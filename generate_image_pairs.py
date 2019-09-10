@@ -8,12 +8,8 @@ import pdb
 
 src = '../dataset/images/'
 dst = open('../dataset/valid/valid.txt', 'a')
-
-cnt = 0
 same_list = []
-diff_list = []
-list1 = []
-list2 = []
+list1, list2 = [], []
 folders_1 = os.listdir(src)
 
 # 产生相同的图像对
@@ -28,8 +24,8 @@ for folder in folders_1:
     for item in itertools.combinations(sublist, 2):
         for name in item:
             same_list.append(name)
-    for j in range(0, len(list1), 2):
-        dst.writelines(same_list[j] + ' ' + same_list[j+1] + '\n')
+for j in range(0, len(list1), 2):
+    dst.writelines(same_list[j] + ' ' + same_list[j+1] + '\n')
 
 list2 = list1.copy()
 # 产生不同的图像对
