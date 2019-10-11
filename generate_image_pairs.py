@@ -24,7 +24,7 @@ for folder in folders_1:
     for item in itertools.combinations(sublist, 2):
         for name in item:
             same_list.append(name)
-for j in range(0, len(list1), 2):
+for j in range(0, len(same_list), 2):
     dst.writelines(same_list[j] + ' ' + same_list[j+1] + '\n')
 
 list2 = list1.copy()
